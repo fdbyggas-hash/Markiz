@@ -1,56 +1,118 @@
 export default function DashboardPage() {
   return (
-    <main
-      className="min-h-screen bg-cover bg-center"
-      style={{
-        backgroundImage:
-          "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('/F799E4EF-18CE-49E0-ADA6-D18B7BB40A9C_1_105_c.jpeg')",
-      }}
-    >
-      {/* MENU */}
-      <nav className="flex justify-between items-center px-10 py-6 bg-black/60">
-        <h1 className="text-4xl font-black text-lime-400">
-          MARKIZ
-        </h1>
+    <main className="min-h-screen bg-black text-white p-6">
 
-        <div className="flex gap-8 text-white font-bold text-lg">
-          <a href="/dashboard">Dashboard</a>
-          <a href="/workout">Workout</a>
-          <a href="/login">Login</a>
+      <a
+        href="/"
+        className="text-lime-400 text-xl mb-6 inline-block"
+      >
+        ← HOME
+      </a>
+
+      <div className="flex justify-between items-center mb-8">
+        <div>
+          <h1 className="text-5xl font-black text-lime-400">
+            MARKIZ
+          </h1>
+          <p className="text-gray-400 mt-2 text-2xl">
+            LEVEL 1
+          </p>
         </div>
-      </nav>
 
-      {/* HERO */}
-      <div className="flex flex-col items-center justify-center text-center pt-32 px-6">
-        <h1 className="text-8xl font-black text-lime-400 drop-shadow-[0_0_25px_lime]">
-          MARKIZ
-        </h1>
-
-        <h2 className="text-4xl text-white font-bold mt-6">
-          ONE TEAM. ONE MISSION.
-        </h2>
-
-        <p className="text-gray-300 mt-6 text-xl max-w-2xl">
-          Build discipline. Destroy weakness. Complete missions.
-          Gain XP. Become impossible to break.
-        </p>
-
-        <div className="flex gap-6 mt-12">
-          <a
-            href="/workout"
-            className="bg-lime-400 text-black px-10 py-4 rounded-2xl font-bold shadow-[0_0_25px_lime]"
-          >
-            START MISSION
-          </a>
-
-          <a
-            href="/login"
-            className="border-2 border-lime-400 text-lime-400 px-10 py-4 rounded-2xl font-bold"
-          >
-            LOGIN
-          </a>
+        <div className="text-right">
+          <p className="text-lime-400 text-4xl font-bold">
+            75 XP
+          </p>
+          <p className="text-lime-400 text-2xl mt-2">
+            🔥 STREAK: 0
+          </p>
         </div>
       </div>
+
+      <div className="flex gap-4 overflow-x-auto mb-10">
+        <div className="bg-lime-400 text-black min-w-[120px] h-[120px] rounded-3xl flex flex-col items-center justify-center font-bold text-2xl">
+          <span>DAY</span>
+          <span>1</span>
+        </div>
+
+        <div className="bg-zinc-900 min-w-[120px] h-[120px] rounded-3xl flex flex-col items-center justify-center font-bold text-2xl">
+          <span>DAY</span>
+          <span>2</span>
+        </div>
+
+        <div className="bg-zinc-900 min-w-[120px] h-[120px] rounded-3xl flex flex-col items-center justify-center font-bold text-2xl">
+          <span>DAY</span>
+          <span>3</span>
+        </div>
+
+        <div className="bg-zinc-900 min-w-[120px] h-[120px] rounded-3xl flex flex-col items-center justify-center font-bold text-2xl">
+          <span>DAY</span>
+          <span>4</span>
+        </div>
+      </div>
+
+      <div className="border border-lime-400 rounded-[40px] p-6">
+        <h2 className="text-7xl font-black text-lime-400 text-center mb-4">
+          DAY 1
+        </h2>
+
+        <p className="text-center text-4xl text-gray-300 mb-10">
+          STRENGTH MISSION
+        </p>
+
+        <div className="space-y-6">
+
+          <div className="bg-zinc-900 rounded-3xl p-6 flex justify-between items-center">
+            <div>
+              <h3 className="text-4xl font-bold">
+                Push Ups × 100
+              </h3>
+              <p className="text-lime-400 text-2xl mt-2">
+                +25 XP
+              </p>
+            </div>
+
+            <input
+              type="checkbox"
+              className="w-10 h-10"
+            />
+          </div>
+
+          <div className="bg-zinc-900 rounded-3xl p-6 flex justify-between items-center">
+            <div>
+              <h3 className="text-4xl font-bold">
+                Pull Ups × 25
+              </h3>
+              <p className="text-lime-400 text-2xl mt-2">
+                +25 XP
+              </p>
+            </div>
+
+            <input
+              type="checkbox"
+              className="w-10 h-10"
+            />
+          </div>
+
+          <div className="bg-zinc-900 rounded-3xl p-6 flex justify-between items-center">
+            <div>
+              <h3 className="text-4xl font-bold">
+                Diamond Push Ups × 50
+              </h3>
+              <p className="text-lime-400 text-2xl mt-2">
+                +25 XP
+              </p>
+            </div>
+
+            <input
+              type="checkbox"
+              className="w-10 h-10"
+            />
+          </div>
+
+        </div>
+      </div>
+
     </main>
   );
 }
